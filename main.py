@@ -53,14 +53,14 @@ def friend_filtering():
         return
     elif screen_magnification_var.get() == 1:
         pyautogui.click(w.left + 30, w.top + 50) # 사람 아이콘
-        pyautogui.click(w.right - 80, w.top + 50) # 돋보기 아이콘
-        pyautogui.click(w.right - 40, w.top + 100) # X 아이콘
-        pyautogui.click(w.right - 80, w.top + 50) # 돋보기 아이콘
+        pyautogui.hotkey('ctrl', 'f') # 돋보기 아이콘
+        pyautogui.press('esc') # X 아이콘
+        pyautogui.hotkey('ctrl', 'f') # 돋보기 아이콘
     elif screen_magnification_var.get() == 2:
         pyautogui.click(w.left + 38, w.top + 70) # 사람 아이콘
-        pyautogui.click(w.right - 90, w.top + 70) # 돋보기 아이콘
-        pyautogui.click(w.right - 50, w.top + 120) # X 아이콘
-        pyautogui.click(w.right - 90, w.top + 70) # 돋보기 아이콘
+        pyautogui.hotkey('ctrl', 'f') # 돋보기 아이콘
+        pyautogui.press('esc') # X 아이콘
+        pyautogui.hotkey('ctrl', 'f') # 돋보기 아이콘
     
     filtering_keyword = filtering_entry.get()
     if filtering_keyword.strip() == "":
